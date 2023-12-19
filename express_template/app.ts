@@ -5,6 +5,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes');
 var usersRouter = require('./routes/users');
+var testRouter = require('./routes/test');
 
 var app = express();
 
@@ -16,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/testRouter', testRouter);
 
 app.listen(4000, () => {
     console.log('http://localhost:4000');
