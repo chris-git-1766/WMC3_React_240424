@@ -4,12 +4,49 @@
   <title>Express</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+  <script src="javascripts/bootstrap.bundle.min.js"></script>
 </head>
   <body>
     <h1 class="display-1">Express</h1>
     <p class="display-6">Welcome to Express</p>
 
-    <script src="javascripts/bootstrap.bundle.min.js"></script>
+    <button onclick="showData()" class="btn btn-primary" id="btShow">show</button>
+    <div id="show">
+      <p>Anzeige der Daten</p>
+    </div>
+
+    <button onclick="addData()" class="btn btn-primary" id="btAdd">add car</button>
+    <form method="post" action="/autos">
+
+      <label for="inBrand" class="form-label">Brand:</label >
+      <input type="text" name="brand" id="inBrand" class="form-control">
+
+      <label for="inModel" class="form-label">Model:</label>
+      <input type="text" name="model" id="inModel" class="form-control">
+
+      <label for="inPS" class="form-label">PS:</label>
+      <input type="text" name="ps" id="inPS" class="form-control">
+
+      <input type="submit" id="btSend" class="btn btn-primary"></input>
+    </form>
+
+    <button onclick="addData()" class="btn btn-primary" id="btAdd2">add car</button>
+    <form method="post" action="">
+
+      <label for="inBrand2" class="form-label">Brand:</label >
+      <input type="text" name="brand" id="inBrand2" class="form-control">
+
+      <label for="inModel2" class="form-label">Model:</label>
+      <input type="text" name="model" id="inModel2" class="form-control">
+
+      <label for="inPS2" class="form-label">PS:</label>
+      <input type="text" name="ps" id="inPS2" class="form-control">
+
+      <button id="btSend2" class="btn btn-primary">auto send2</button>
+    </form>
+
+
+    <script>var exports = {}</script>
     <script src="javascripts/main.js"></script>
   </body>
 </html>
